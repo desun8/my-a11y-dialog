@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A11y Dialog</title>
+
+  <link rel="stylesheet" href="a11y.css">
+
+  <style>
+    header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 1em;
+    }
+
+    header .btn-dialog {
+      justify-self: end;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        color: #cecece;
+        background-color: #222;
+      }
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <span class="logo">Site Logo</span>
+    
+    <button class="btn-dialog" aria-label="open dialog">
+      <span aria-hidden="true">Open</span>
+    </button>
+  </header>
+
+  <main>
+    <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum placeat magni cum ratione exercitationem delectus ad consectetur nihil, accusamus doloribus, ipsam suscipit impedit saepe? Rerum iste excepturi totam quos quo.</span><span>Exercitationem veritatis delectus consectetur, corrupti aliquam laboriosam esse <a href="#" aria-label="link for test">quas possimus</a> beatae nihil quam eius nam fugit laborum eaque nisi vitae fuga rem quis mollitia suscipit amet. Dolor, dolores vitae?</span></p>
+  </main>
+
+  <div class="dialog-container" id="dialog" aria-hidden="true">
+    <!-- <div tabindex="-1"></div> -->
+    <div role="alertdialog" aria-labelledby="dialog-title">
+      <div role="document">
+        <button class="inner-btn-close" type="button" data-a11y-dialog-hide aria-label="Close dialog">&times;</button>
+
+        <h1 id="dialog-title" style="display: none;">Dialog title</h1>
+
+        <!--
+          Here lives the main content of the dialog.
+        -->
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__link">Начало</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">О нас</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Наши услуги</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Стоимость</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <!-- #my-accessible-dialog -->
+  <div class="dialog-container" id="dialog-outside" aria-hidden="true">
+    <div role="alertdialog" aria-labelledby="dialog-title">
+      <div role="document">
+        <h1 id="dialog-title" style="display: none;">Dialog title</h1>
+
+        <!--
+          Here lives the main content of the dialog.
+        -->
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__link">Начало</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">О нас</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Наши услуги</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Стоимость</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <script src="./a11y-dialog.js" defer></script>
+</body>
+</html>
