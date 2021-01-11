@@ -24,88 +24,115 @@
         color: #cecece;
         background-color: #222;
       }
-  }
+    }
   </style>
 </head>
 <body>
-  <header>
-    <span class="logo">Site Logo</span>
-    
-    <button class="btn-dialog" aria-label="open dialog">
-      <span aria-hidden="true">Open</span>
-    </button>
-  </header>
+<header>
+  <span class="logo">Site Logo</span>
 
-  <main>
-    <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum placeat magni cum ratione exercitationem delectus ad consectetur nihil, accusamus doloribus, ipsam suscipit impedit saepe? Rerum iste excepturi totam quos quo.</span><span>Exercitationem veritatis delectus consectetur, corrupti aliquam laboriosam esse <a href="#" aria-label="link for test">quas possimus</a> beatae nihil quam eius nam fugit laborum eaque nisi vitae fuga rem quis mollitia suscipit amet. Dolor, dolores vitae?</span></p>
-  </main>
+  <button class="btn-dialog  btn-dialog--open" aria-label="open dialog">
+    <span aria-hidden="true">Open menu</span>
+  </button>
 
-  <div class="dialog-container" id="dialog" aria-hidden="true">
-    <!-- <div tabindex="-1"></div> -->
-    <div role="alertdialog" aria-labelledby="dialog-title">
-      <div role="document">
-        <button class="inner-btn-close" type="button" data-a11y-dialog-hide aria-label="Close dialog">&times;</button>
+  <button class="btn-dialog  btn-dialog--open-close" aria-label="open dialog" a11y-dialog-label-open="open dialog."
+          a11y-dialog-label-close="close dialog">
+    <span aria-hidden="true">Open/close menu</span>
+  </button>
+</header>
 
-        <h1 id="dialog-title" style="display: none;">Dialog title</h1>
+<main>
+  <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum placeat magni cum ratione exercitationem delectus ad consectetur nihil, accusamus doloribus, ipsam suscipit impedit saepe? Rerum iste excepturi totam quos quo.</span><span>Exercitationem veritatis delectus consectetur, corrupti aliquam laboriosam esse <a
+          href="#" aria-label="link for test">quas possimus</a> beatae nihil quam eius nam fugit laborum eaque nisi vitae fuga rem quis mollitia suscipit amet. Dolor, dolores vitae?</span>
+  </p>
+</main>
 
-        <!--
-          Here lives the main content of the dialog.
-        -->
-        <nav class="nav">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="#" class="nav__link">Начало</a>
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">О нас</a>
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">Наши услуги</a>
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">Стоимость</a>
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+<div class="dialog-container" id="dialog" aria-hidden="true">
+  <!-- <div tabindex="-1"></div> -->
+  <div role="alertdialog" aria-labelledby="dialog-title">
+    <div role="document">
+      <button class="inner-btn-close" type="button" aria-label="Close dialog">&times;</button>
+
+      <h1 id="dialog-title" style="display: none;">It's open dialog window</h1>
+
+      <!--   CONTENT   -->
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#" class="nav__link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Our services</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Price</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Contacts</a>
+          </li>
+        </ul>
+      </nav>
     </div>
   </div>
+</div>
 
-  <!-- #my-accessible-dialog -->
-  <div class="dialog-container" id="dialog-outside" aria-hidden="true">
-    <div role="alertdialog" aria-labelledby="dialog-title">
-      <div role="document">
-        <h1 id="dialog-title" style="display: none;">Dialog title</h1>
+<!-- #my-accessible-dialog -->
+<div class="dialog-container" id="dialog-outside" aria-hidden="true">
+  <div role="alertdialog" aria-labelledby="dialog-outside-title">
+    <div role="document">
+      <h1 id="dialog-outside-title" style="display: none;">Dialog title</h1>
 
-        <!--
-          Here lives the main content of the dialog.
-        -->
-        <nav class="nav">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="#" class="nav__link">Начало</a>
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">О нас</a>
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">Наши услуги</a>
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">Стоимость</a>
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      <!--
+        Here lives the main content of the dialog.
+      -->
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#" class="nav__link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Our services</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Price</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Contacts</a>
+          </li>
+        </ul>
+      </nav>
     </div>
   </div>
+</div>
 
-  <script src="./a11y-dialog.js" defer></script>
+<script src="./a11y-dialog.js"></script>
+<script>
+  const elm = document.querySelector('#dialog');
+  const btnOpen = document.querySelector('.btn-dialog--open');
+  const btnClose = document.querySelector('#dialog .inner-btn-close');
+
+  const dialog = new A11yDialog(elm, btnClose);
+
+  btnOpen.onclick = () => dialog.show();
+</script>
+
+<script type="module">
+  import A11yDialog from './a11y-dialog.esm.js';
+
+  const elm = document.querySelector('#dialog-outside');
+  const btn = document.querySelector('.btn-dialog--open-close');
+  const labelOpen = btn.getAttribute("a11y-dialog-label-open");
+  const labelClose = btn.getAttribute("a11y-dialog-label-close");
+
+  const dialog = new A11yDialog(elm, btn, labelOpen, labelClose);
+
+  btn.onclick = () => dialog.show();
+</script>
 </body>
 </html>

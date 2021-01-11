@@ -10,13 +10,13 @@ export default {
       file: pkg.main,
       format: 'umd',
       sourcemap: true,
-      name: pkg.name,
+      name: 'A11yDialog',
     },
     {
       file: pkg.module,
       format: 'es',
       sourcemap: true,
-      name: pkg.name,
+      name: 'A11yDialog',
     },
   ],
   plugins: [
