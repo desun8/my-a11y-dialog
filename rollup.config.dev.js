@@ -12,13 +12,13 @@ export default {
       file: `example/${pkg.name}.js`,
       format: 'umd',
       sourcemap: true,
-      name: pkg.name,
+      name: 'A11yDialog',
     },
     {
       file: `example/${pkg.name}.esm.js`,
       format: 'es',
       sourcemap: true,
-      name: pkg.name,
+      name: 'A11yDialog',
     },
   ],
   plugins: [
